@@ -3,6 +3,8 @@
 <p> Title: <%= @article.title %> </p>
 <p> Description: <%= @article.description %> </p>
 
-<%= link_to "Edit", edit_article_path(params[:id])%>
+<p> <%= link_to "Edit", edit_article_path(params[:id])%> </p>
+
+<p> <%= link_to "Articles List page", articles_path%> </p>
 
 
