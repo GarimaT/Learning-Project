@@ -3860,3 +3860,84 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/articles" for 127.0.0.1 at 2017-06-01 16:12:36 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  Rendered articles/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-06-01 16:12:43 +0530
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (6.7ms)
+  Rendered articles/new.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-06-01 16:13:03 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  Rendered articles/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/7/edit" for 127.0.0.1 at 2017-06-01 16:13:06 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 7 LIMIT 1[0m
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.3ms)
+  Rendered articles/edit.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_messages.html.erb (5.0ms)
+Completed 200 OK in 42ms (Views: 36.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/articles/7" for 127.0.0.1 at 2017-06-01 16:13:10 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oo8qEXHOrEFtYHZy4RHwNbrrg/1yV9GvwwrQxVwh0XBwD/je47jaajk34DosikzxQmsjXEQByETWLXolDkH1LA==", "article"=>{"title"=>"", "description"=>"Description"}, "commit"=>"Update Article", "id"=>"7"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (6.4ms)
+  Rendered articles/edit.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_messages.html.erb (1.8ms)
+Completed 200 OK in 39ms (Views: 29.6ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/articles/7" for 127.0.0.1 at 2017-06-01 16:13:15 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zf/Vyir2fWoTEBwkjiCLVWLbO2Xr18PoBI2Sw/WF+JvKi1JI6cTbNrd3sGVfxUVxcYYOPMXKKni1Y+VTINmEkA==", "article"=>{"title"=>"njfnnfnewkfn jnlkncewk", "description"=>"Description"}, "commit"=>"Update Article", "id"=>"7"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE `articles` SET `title` = 'njfnnfnewkfn jnlkncewk', `updated_at` = '2017-06-01 10:43:15' WHERE `articles`.`id` = 7[0m
+  [1m[35m (134.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/articles/7
+Completed 302 Found in 146ms (ActiveRecord: 136.7ms)
+
+
+Started GET "/articles/7" for 127.0.0.1 at 2017-06-01 16:13:16 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 7 LIMIT 1[0m
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-06-01 16:13:23 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  Rendered articles/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.6ms)
+
+
