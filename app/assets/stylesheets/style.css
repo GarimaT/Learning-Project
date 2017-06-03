@@ -1,0 +1,41 @@
+$navbar-default-bg:  #293d3d;
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo{
+	float: left;
+	font-size: 30px;
+	font-family: "lato";
+	 font-weight: bold;
+	 color: #000000;
+	 letter-spacing: -1px;
+}
+
+#logo:hover{
+	color: #fff;
+	tet-decoration: none;
+}
+h1 span{
+	display:block;
+}
+
+.home-cover{
+	background-image: url(Home-bg.jpg);
+	width: 100%;
+	height: 600px;
+	background-size: 100%;
+	background-position: center center; 
+	background-repeat: no-repeat;
+}
+
+
+.home-cover h1 {
+	color: #6696cc;
+	font-weight: bold;
+	font-family: "lato";
+	letter-spacing: 2px;
+	font-size: 80px;
+
+}

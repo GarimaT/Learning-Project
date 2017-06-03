@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class ArticlesController < Application Controller
 	
 	before_action :set_article, only: [:edit, :update, :show, :destroy]
 
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 		#redirect_to articles_path(@article)
 	end
 
-	def updated
+	def update
 		if @article.update(article_params)
 			flash[:notice] = "Article was successfully updated"
 			redirect_to article_path(@article)
