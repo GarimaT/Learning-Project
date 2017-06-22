@@ -39,3 +39,22 @@ h1 span{
 	font-size: 80px;
 
 }
+.footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	color: #777;
+}
+.footer a:hover {
+	color: #222;
+}
+.footer small{
+	float: left;
+}
+.footer ul{
+	float: right;
+}
+.footer ui li{
+	float: left;
+	margin-left: 15px;
+}
