@@ -6,7 +6,9 @@ get 'about', to: 'pages#about'
 
 resources :articles
 
-get 'signup', to: 'users#new_user'
+get '/signup', to: 'users#new_user'
 
-resources :users, except: [:new_user]
+get '/login', to: 'users#existing_user'
+
+resources :users
 end
