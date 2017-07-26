@@ -49,7 +49,16 @@ class ArticlesController < ApplicationController
 		flash[:danger] = "Article deleted successfully"
 		redirect_to articles_path
 	end
-
+   
+    def update_status
+    	article = Article.find(params[:id])
+    	if params[:checked] == "true"
+    	  article.status = true
+    	else
+    	  article.status = false	
+    	end  
+    	article.save(validate: false)
+    end
 
 	private
 

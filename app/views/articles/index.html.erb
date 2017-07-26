@@ -1,6 +1,7 @@
 <h1 align="center"> List of all the Articles </h1>
 
  <%= render 'article', obj: @articles %>
+ <%= javascript_include_tag "status.js" %>
  <div align="center"> 
 	<%= will_paginate %>	
 </div>

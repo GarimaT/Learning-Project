@@ -3,7 +3,18 @@
 	 		<div class="col-xs-8 col-xs-offset-2">
 	 			<div class="well well-lg">
 	 				<div class="article-title">
-	 					<%= link_to article.title, article_path(article.id) %> 
+	 				  <% if article.status == true %>
+	 					  <%= link_to article.title, article_path(article.id) , class: "article_title_#{article.id}" , style: "color: black"%>
+	 				  <% else %>	
+	 					  <%= link_to article.title, article_path(article.id) , class: "article_title_#{article.id}" %>
+	 				  <% end %>
+	 					<% unless params[:controller] == "users" %>
+	 					  <% if article.status == true %>
+	 					    <%= check_box_tag :status_update , "", true , id: "status_update_#{article.id}" , :onclick => "set(this.id)"%>
+	 					  <% else %>
+	 					   <%= check_box_tag :status_update , "", false,  id: "status_update_#{article.id}" , :onclick => "set(this.id)" %>
+	 					  <% end %>
+	 					<% end %>
 	 				</div>
 	 				<div class="article-body">
 	 					<%= truncate(article.description, length: 100) %>
@@ -22,4 +33,23 @@
 	 			</div>
 	 		</div>
 	 	</div>
- <% end %>
+<% end %>
+ 
+<script>
+  function set(id)
+	 {
+		
+			var checked = document.getElementById(id).checked;
+      var id = id.split("_")[2];
+
+		$.ajax
+		({
+      type: "GET",
+      url: '/article/update_status',
+      data: { id: id, checked: checked},
+      success: function(data) {}
+    });
+	 }
+
+</script>
+

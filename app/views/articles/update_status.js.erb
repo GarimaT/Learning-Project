@@ -1,0 +1,5 @@
+<% if  params[:checked] == "true" %>
+$(".article_title_<%= params[:id] %>").attr('style', 'color: black');
+<% else %>
+$(".article_title_<%= params[:id] %>").attr('style', 'color: ');
+<% end %>
